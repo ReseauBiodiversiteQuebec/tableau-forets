@@ -1,0 +1,35 @@
+.card-content-top {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding: 2px 0.5em;
+  margin-bottom: 5px;
+}
+
+.card-content-bottom {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding: 2px 0.5em;
+  align-items: center;
+}
+
+.card-title-info {
+  font-weight: bold;
+  font-size: 10pt;
+}
+
+.card-obs-info {
+  font-size: 8pt;
+}
+
+.card-detail {
+  font-size: 8pt;
+  border-left: 2px solid rgba(46, 72, 62, 0.4);
+  padding-left: 3px;
+  flex: 1;
+}
+
+.card-text-bold {
+  font-weight: bold;
+}

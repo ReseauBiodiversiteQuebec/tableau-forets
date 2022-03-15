@@ -1,0 +1,45 @@
+.gray-background {
+  background-color: rgba(220, 220, 220, 0.582);
+}
+
+.white-background {
+  background-color: hsla(0, 0%, 100%, 0.6);
+}
+
+.legend-item {
+  display: flex;
+  justify-content: left;
+  background: transparent;
+  gap: 0.5em;
+}
+
+.legend-item-text {
+  flex-grow: 1;
+  text-align: center;
+  white-space: nowrap;
+  font-size: 1em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+.absolute {
+  position: absolute;
+}
+
+@keyframes legend {
+  from {
+    font-size: 0.2em;
+    background-color: black;
+  }
+  to {
+    font-size: 1em;
+    background-color: rgba(255, 255, 255, 0.2);
+    background: transparent;
+  }
+}
+
+.legend-amin span {
+  animation-name: legend;
+  animation-duration: 1s;
+  font-size: 1em;
+}
