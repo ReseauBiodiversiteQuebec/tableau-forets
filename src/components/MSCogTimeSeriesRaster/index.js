@@ -37,7 +37,7 @@ export default function GeoRaster({ url }) {
     }
     return () => {
       if (map && layerRef.current) {
-        setTimeout(()=>{map.removeLayer(layerRef.current)},1500);
+        setTimeout(()=>{map.removeLayer(layerRef.current)},2000);
       }
     };
   }, [raster, map]);

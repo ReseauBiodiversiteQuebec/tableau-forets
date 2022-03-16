@@ -19,8 +19,8 @@ function Sidebar(props) {
         </Title>
 
         <Description>
-          Évolution des envelopes climatiques par espèces pour différents
-          scénarios projetés
+          Modélisation de la biomasse des principales espèces d'arbres au Québec en fonction de différents scénarios climatiques et d'aménagement.  
+          <a style={{color:'#ffffff'}} href="https://link.springer.com/article/10.1007/s10980-021-01241-7"> Référence</a>
         </Description>
       </SiderTitleContainer>
       <SidebarForms />
