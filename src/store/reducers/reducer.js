@@ -1,10 +1,11 @@
-import { SETSEARCHSTATUS, SETENVELOPS, SETCOGURI } from "./types";
+import { SETSEARCHSTATUS, SETENVELOPS, SETCOGURI, SETCURRENTLAYER } from "./types";
 import { get_envelopes, get_summary } from "../../services/apiService";
 
 const initialState = {
   features: [],
   fetching: false,
   cog_uri: "https://object-arbutus.cloud.computecanada.ca/bq-io/io/forets-cc-landis/baseline_BudwormBaselineFire_ABIE.BAL_0_merged.tif",
+  current_layer: {}
 };
 
 const mapReducer = (state = initialState, action) => {
@@ -27,6 +28,11 @@ const mapReducer = (state = initialState, action) => {
         ...state,
         cog_uri: payload.cog_uri
       };
+    case SETCURRENTLAYER:
+      return {
+        ...state,
+        current_layer: payload.current_layer
+      };
     default:
       return state;
   }
@@ -42,6 +48,17 @@ export default mapReducer;
 export const updateFetchingStatus = (status) => async (dispatch) => {
   dispatch({ type: SETSEARCHSTATUS, payload: { fetching: status } });
 };
+
+
+/**
+ *
+ * @param {*} status
+ * @returns
+ */
+export const updateCurrentLayer = (status) => async (dispatch) => {
+  dispatch({ type: SETCURRENTLAYER, payload: { fetching: status } });
+};
+
 
 
 /**

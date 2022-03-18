@@ -5,14 +5,15 @@ import { colors } from "../../../styles";
 export const SidebarFormContainer = styled(SiderContainer)`
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
   padding: 0 30px;
 `;
 
 export const WrapperContainer = styled(SiderContainer)`
   display: flex;
   flex-direction: column;
-  padding: 0 1.8em;
+  padding: 0 1em;
+  margin:0px;
 `;
 
 export const Spiner = styled.div`
@@ -25,6 +26,6 @@ export const Spiner = styled.div`
 export const SelectorTitle = styled.div`
   font-weight: bold;
   color: ${colors.darkgreen};
-  font-size: 14pt;
+  font-size: 12pt;
   padding: 0.5em 0;
 `;

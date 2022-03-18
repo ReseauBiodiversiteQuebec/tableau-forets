@@ -80,22 +80,8 @@ function SidebarForms(props) {
     {option: 'QUER.RUB', value: 'Quercus rubra', vernacular_fr: 'Chêne rouge'},
     {option: 'THUJ.SPP.ALL', value: 'Thuja occidentalis', vernacular_fr: 'Thuya occidental'},
     {option: 'TSUG.CAN', value: 'Tsuga canadensis', vernacular_fr: 'Pruche du canada'},
-    {option: 'TotalBiomass', value: 'Biomasse totale'}
+    {option: 'TotalBiomass', value: ' ', vernacular_fr: 'Biomasse totale'}
   ]
-
-  const scenarios = [
-    {option: 'baseline_BudwormBaselineFire', value: 'Climat historique - Feux historiques - Sans aménagement'},
-    {option: 'baseline_BudwormBaselineFireBaselineHarvest', value: 'Climat historique - Feux historiques - Aménagement écoystémique'},
-    {option: 'RCP45_GrowthBudwormBaselineFire', value: 'Climat RCP45 - Feux historiques - Sans aménagement'},
-    {option: 'RCP85_GrowthBudwormBaselineFire', value: 'Climat RCP85 - Feux historiques - Sans aménagement'},
-    {option: 'RCP45_GrowthBudwormProjectedFire', value: 'Climat RCP45 - Feux projetés - Sans aménagement'},
-    {option: 'RCP85_GrowthBudwormProjectedFire', value: 'Climat RCP85 - Feux projetés - Sans aménagement'},
-    {option: 'RCP45_GrowthBudwormBaselineFireBaselineHarvest', value: 'Climat RCP45 - Feux historiques - Aménagement écoystémique'},
-    {option: 'RCP85_GrowthBudwormBaselineFireBaselineHarvest', value: 'Climat RCP85 - Feux historiques - Aménagement écoystémique'},
-    {option: 'RCP45_GrowthBudwormProjectedFireBaselineHarvest', value: 'Climat RCP45 - Feux projetés - Aménagement écoystémique'},
-    {option: 'RCP85_GrowthBudwormProjectedFireBaselineHarvest', value: 'Climat RCP85 - Feux projetés - Aménagement écoystémique'}
-  ]
-
   const years = [
     {value: 0},
     {value: 100*1/13},
