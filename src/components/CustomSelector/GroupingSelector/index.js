@@ -19,7 +19,7 @@ export default function GroupedSelect(props) {
   let group = "";
   return (
     <div style={{ width: "100%" }} onClick={(event) => event.stopPropagation()}>
-      <FormControl sx={{ width: "100%" }}>
+      <FormControl sx={{ width: "100%", p:1, m:0  }}>
         <CSelect
           displayEmpty
           value={value}

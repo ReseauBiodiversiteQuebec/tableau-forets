@@ -4,10 +4,9 @@ import { isNaN } from "lodash";
 import parseGeoraster from "georaster";
 import GeoRasterLayer from "georaster-layer-for-leaflet";
 import chroma from "chroma-js";
-import { useSelector, useDispatch } from "react-redux";
-import { updateCurrentLayer } from "../../store/reducers/reducer";
+import { colors } from "../../styles";
 
-const scale = chroma.scale(["#E5E5E5", "#36648B", "#5CACEE", "#63B8FF", "#FFD700", "#FF0000", "#8B0000"]).domain([0.001, 100]);
+const scale = chroma.scale([colors.legend1, colors.legend2, colors.legend4, colors.legend5, colors.legend7]).domain([0.001, 80]);
 
 export default function GeoRaster({url}) {
   const { map, layerContainer } = useLeaflet();
@@ -41,7 +40,7 @@ export default function GeoRaster({url}) {
                 map.removeLayer(layer);
               }
             });
-        },100)
+        },200)
       })
       const container = layerContainer || map;
       layerRef.current = layer;

@@ -28,11 +28,6 @@ const mapReducer = (state = initialState, action) => {
         ...state,
         cog_uri: payload.cog_uri
       };
-    case SETCURRENTLAYER:
-      return {
-        ...state,
-        current_layer: payload.current_layer
-      };
     default:
       return state;
   }
@@ -48,18 +43,6 @@ export default mapReducer;
 export const updateFetchingStatus = (status) => async (dispatch) => {
   dispatch({ type: SETSEARCHSTATUS, payload: { fetching: status } });
 };
-
-
-/**
- *
- * @param {*} status
- * @returns
- */
-export const updateCurrentLayer = (status) => async (dispatch) => {
-  dispatch({ type: SETCURRENTLAYER, payload: { fetching: status } });
-};
-
-
 
 /**
  *

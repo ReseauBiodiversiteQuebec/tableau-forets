@@ -4,6 +4,7 @@ import { isNaN } from "lodash";
 import parseGeoraster from "georaster";
 import GeoRasterLayer from "georaster-layer-for-leaflet";
 import chroma from "chroma-js";
+import { colors } from "../../styles";
 
 function calcNdvi(nir, red) {
   return (nir - red) / (nir + red);

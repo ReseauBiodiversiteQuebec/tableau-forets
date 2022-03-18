@@ -31,6 +31,7 @@ const Legend = (props) => {
     left = 0,
     right = 0,
     colorClass = "",
+    title,
   } = props;
 
   useEffect(() => {}, []);
@@ -54,7 +55,7 @@ const Legend = (props) => {
           />
         );
       })}
-      Biomasse (kg/ha)
+      {title}
     </CustomLegend>
   );
 };

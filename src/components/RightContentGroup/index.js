@@ -14,13 +14,11 @@ function RightContentGroup() {
         bottom={20}
         right={10}
         items={[
-          { text: "<10", color: colors.legend1 },
-          { text: "10-25", color: colors.legend2 },
-          { text: "25-40", color: colors.legend3 },
-          { text: "40-55", color: colors.legend4 },
-          { text: "55-70", color: colors.legend5 },
-          { text: "70-85", color: colors.legend6 },
-          { text: "85-100", color: colors.legend7 }
+          { text: "<16", color: colors.legend1 },
+          { text: "16-32", color: colors.legend2 },
+          { text: "32-48", color: colors.legend4 },
+          { text: "48-64", color: colors.legend5 },
+          { text: "64-80", color: colors.legend7 }
         ]}
         colorClass={"white-background"}
         title={"Biomasse (tonnes/ha)"}
