@@ -6,16 +6,15 @@ import { CListSubheader, CSelect } from "../selectorstyles";
 import TaxaMenuItem from "../TaxaMenuItem";
 
 export default function GroupedSelect(props) {
-  const { elementList = [], onValueChange, selectorId } = props;
-  const [value, setValue] = useState("");
-  const handleChange = (event) => {
-    setValue(event.target.value);
+ const { elementList = [], onValueChange, selectorId, value } = props;
+ const handleChange = (event) => {
     onValueChange({ selectorId: selectorId, value: event.target.value });
   };
 
-  React.useEffect(() => {
-    setValue(elementList.length > 0 ? elementList[1].option : "");
-  }, [elementList]);
+  /*React.useEffect(() => {
+    setValue(elementList.length > 0 ? elementList[0].value : "");
+    setOption(elementList.length > 0 ? elementList[0].option : "");
+  }, [elementList]);*/
 
   let group = "";
   return (
@@ -25,20 +24,8 @@ export default function GroupedSelect(props) {
           displayEmpty
           value={value}
           onChange={handleChange}
-          native={false}
-          renderValue={(selected) => {
-            return selected;
-          }}
         >
           {elementList.map((element) => {
-            if (element.group_fr !== group) {
-              group = element.group_fr;
-              return (
-                <CListSubheader key={_.uniqueId(JSON.stringify(element))}>
-                  {element.group_fr}
-                </CListSubheader>
-              );
-            } else {
               return (
                 <MenuItem
                   key={_.uniqueId(JSON.stringify(element))}
@@ -48,7 +35,7 @@ export default function GroupedSelect(props) {
                 </MenuItem>
               );
             }
-          })}
+          )}
         </CSelect>
       </FormControl>
     </div>

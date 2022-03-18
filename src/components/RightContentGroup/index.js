@@ -23,7 +23,7 @@ function RightContentGroup() {
           { text: "85-100", color: colors.legend7 }
         ]}
         colorClass={"white-background"}
-        title={"Biomasse (kg/ha)"}
+        title={"Biomasse (tonnes/ha)"}
       />
     </RightContent>
   );

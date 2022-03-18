@@ -49,8 +49,14 @@ export const updateFetchingStatus = (status) => async (dispatch) => {
  * @param {*} status
  * @returns
  */
-export const updateCOGURI = (scenario,species,year) => async (dispatch) => {
-  const uri = "https://object-arbutus.cloud.computecanada.ca/bq-io/io/forets-cc-landis/"+scenario+"_"+species+"_"+year+"_merged.tif"
+export const updateCOGURI = (scenario_climate,scenario_fire,scenario_harvest,species,year) => async (dispatch) => {
+  let pre=''
+  if (scenario_climate === 'baseline'){
+    pre='Budworm'
+  }else{
+    pre='GrowthBudworm'
+  }
+  const uri = "https://object-arbutus.cloud.computecanada.ca/bq-io/io/forets-cc-landis/"+scenario_climate+"_"+pre+scenario_fire+scenario_harvest+"_"+species+"_"+year+"_merged.tif"
   dispatch({ type: SETCOGURI, payload: { cog_uri: uri } });
 };
 
