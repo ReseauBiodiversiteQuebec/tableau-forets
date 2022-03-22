@@ -45,6 +45,7 @@ export const LeftContent = styled(Container)`
   padding: 0;
   background-color: transparent;
   width: max(20%, 290px);
+  overflow-y:scroll;
 `;
 
 export const RightContent = styled(LeftContent)`
