@@ -23,9 +23,18 @@ export const GlobalStyle = createGlobalStyle`
       & [class*="MuiButtonBase-root-MuiMenuItem-root"] {
         padding: 2px 16px
       }
-    }
+    } 
 
-  }`;
+  }
+  
+  [class*="selector"] {
+    width: 100%;
+    [class*="MuiOutlinedInput-input"] {
+    padding: 8px 16px;
+  }
+  }
+
+  `;
 
 export const AppContainer = styled(Container)`
   display: flex;
@@ -45,7 +54,7 @@ export const LeftContent = styled(Container)`
   padding: 0;
   background-color: transparent;
   width: max(20%, 290px);
-  overflow-y:scroll;
+  overflow-y: scroll;
 `;
 
 export const RightContent = styled(LeftContent)`

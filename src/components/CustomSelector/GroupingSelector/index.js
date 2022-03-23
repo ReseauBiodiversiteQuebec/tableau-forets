@@ -6,8 +6,8 @@ import { CListSubheader, CSelect } from "../selectorstyles";
 import TaxaMenuItem from "../TaxaMenuItem";
 
 export default function GroupedSelect(props) {
- const { elementList = [], onValueChange, selectorId, value } = props;
- const handleChange = (event) => {
+  const { elementList = [], onValueChange, selectorId, value } = props;
+  const handleChange = (event) => {
     onValueChange({ selectorId: selectorId, value: event.target.value });
   };
 
@@ -18,24 +18,23 @@ export default function GroupedSelect(props) {
 
   let group = "";
   return (
-    <div style={{ width: "100%" }} onClick={(event) => event.stopPropagation()}>
-      <FormControl sx={{ width: "100%", p:1, m:0  }}>
-        <CSelect
-          displayEmpty
-          value={value}
-          onChange={handleChange}
-        >
+    <div
+      className="selector"
+      style={{ width: "100%" }}
+      onClick={(event) => event.stopPropagation()}
+    >
+      <FormControl sx={{ width: "100%", p: 1, m: 0 }}>
+        <CSelect displayEmpty value={value} onChange={handleChange}>
           {elementList.map((element) => {
-              return (
-                <MenuItem
-                  key={_.uniqueId(JSON.stringify(element))}
-                  value={element.option}
-                >
-                  <TaxaMenuItem {...element} />
-                </MenuItem>
-              );
-            }
-          )}
+            return (
+              <MenuItem
+                key={_.uniqueId(JSON.stringify(element))}
+                value={element.option}
+              >
+                <TaxaMenuItem {...element} />
+              </MenuItem>
+            );
+          })}
         </CSelect>
       </FormControl>
     </div>
