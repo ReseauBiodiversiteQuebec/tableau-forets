@@ -1,6 +1,6 @@
 import React from "react";
 import "leaflet/dist/leaflet.css";
-import { Map, TileLayer, GeoJSON } from "react-leaflet";
+import { MapContainer, TileLayer, GeoJSON } from "react-leaflet";
 import { useSelector } from "react-redux";
 import { colors } from "../../styles";
 import _ from "underscore";
@@ -38,15 +38,11 @@ export default function App() {
 
   return (
     <>
-      <Map
+      <MapContainer
         style={MAP_STYLES}
-        viewport={RGBViewPort}
-        onViewportChange={(viewPort) => setRGBViewPort(viewPort)}
+        center={cogPosition}
+        zoom={6}
         maxZoom={25}
-        onzoomend={(e) => {
-          console.log("zoomend");
-          console.log(e);
-        }}
       >
         <TileLayer
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -57,7 +53,7 @@ export default function App() {
           data={generalState.features}
           onEachFeature={onEachPolygon}
         />
-      </Map>
+      </MapContainer>
     </>
   );
 }
