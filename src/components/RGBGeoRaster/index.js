@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { useLeaflet } from "react-leaflet";
+import { useMap } from "react-leaflet";
 import parseGeoraster from "georaster";
 import GeoRasterLayer from "georaster-layer-for-leaflet";
 import { isNaN } from "lodash";
@@ -7,15 +7,14 @@ import chroma from "chroma-js";
 import { palette } from "../../palette";
 
 export default function GeoRaster({ url }) {
-  const { map, layerContainer } = useLeaflet();
+  const map = useMap();
 
   const layerRef = React.useRef(null);
 
   useEffect(() => {
     parseGeoraster(url).then((georaster) => {
-      console.log(georaster);
       const { mins, noDataValue, ranges } = georaster;
-      console.log({ mins, noDataValue, ranges });
+
       const layer = new GeoRasterLayer({
         attribution: "Planet",
         georaster,
@@ -23,7 +22,7 @@ export default function GeoRaster({ url }) {
         debugLevel: 0,
         pixelValuesToColorFn: (values) => {
           const haveDataForAllBands = values.every(
-            (value) => value || isNaN(value),
+            (value) => value || isNaN(value)
           );
           if (!haveDataForAllBands) {
             return "#00000000";
@@ -43,7 +42,7 @@ export default function GeoRaster({ url }) {
       });
 
       layerRef.current = layer;
-      const container = layerContainer || map;
+      const container = map;
 
       container.addLayer(layer);
 
@@ -52,7 +51,7 @@ export default function GeoRaster({ url }) {
     });
 
     return () => map.removeLayer(layerRef.current);
-  }, [map, layerContainer, url]);
+  }, [map, url]);
 
   return null;
 }
