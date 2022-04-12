@@ -1,14 +1,13 @@
 import React from "react";
 import { RightContent } from "../../appStyles.js";
 import MSMaps from "../MSMaps";
-import RGBMaps from "../RGBMaps";
 import Legend from "../Legend";
 import { colors } from "../../styles";
 
 function RightContentGroup() {
   return (
     <RightContent>
-      <RGBMaps />
+      <MSMaps />
       <Legend
         absolute={true}
         location={"bottom-right"}
