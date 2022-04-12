@@ -8,7 +8,7 @@ import { colors } from "../../styles";
 function RightContentGroup() {
   return (
     <RightContent>
-      <MSMaps />
+      <RGBMaps />
       <Legend
         absolute={true}
         location={"bottom-right"}
