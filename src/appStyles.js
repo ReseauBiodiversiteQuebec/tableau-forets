@@ -54,11 +54,10 @@ export const LeftContent = styled(Container)`
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  width: 20%;
+  width: 100%;
   height: 100%;
   padding: 0;
   background-color: transparent;
-  width: max(20%, 290px);
   overflow-y: hidden;
 `;
 
