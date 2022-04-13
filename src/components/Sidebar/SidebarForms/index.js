@@ -178,8 +178,8 @@ function SidebarForms(props) {
         newState.in_scenario_fire,
         newState.in_scenario_harvest,
         newState.in_species,
-        Math.round(0.1 * newState.in_year * 13),
-      ),
+        Math.round(0.1 * newState.in_year * 13)
+      )
     );
   };
 
@@ -206,10 +206,10 @@ function SidebarForms(props) {
               newState.in_scenario_fire,
               newState.in_scenario_harvest,
               newState.in_species,
-              Math.round(0.1 * newState.in_year * 13),
-            ),
+              Math.round(0.1 * newState.in_year * 13)
+            )
           );
-        }, 1500),
+        }, 1500)
       );
     } else {
       clearInterval(intervalID);

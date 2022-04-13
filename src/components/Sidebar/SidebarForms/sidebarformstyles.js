@@ -7,13 +7,19 @@ export const SidebarFormContainer = styled(SiderContainer)`
   flex-direction: column;
   gap: 10px;
   padding: 0 30px;
+  max-height: 80vh;
+  overflow-y: hidden;
+
+  @media (max-height: 960px) {
+    overflow-y: scroll;
+  }
 `;
 
 export const WrapperContainer = styled(SiderContainer)`
   display: flex;
   flex-direction: column;
   padding: 0 1em;
-  margin:0px;
+  margin: 0px;
 `;
 
 export const Spiner = styled.div`

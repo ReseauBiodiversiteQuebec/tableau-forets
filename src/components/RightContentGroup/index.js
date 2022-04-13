@@ -4,10 +4,11 @@ import MSMaps from "../MSMaps";
 import Legend from "../Legend";
 import { colors } from "../../styles";
 
-function RightContentGroup() {
+function RightContentGroup(props) {
+  const { width, height } = props;
   return (
     <RightContent>
-      <MSMaps />
+      {width !== 0 && height !== 0 && <MSMaps />}
       <Legend
         absolute={true}
         location={"bottom-right"}

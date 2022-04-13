@@ -1,0 +1,38 @@
+.sidebar-container-dashboard {
+  position: relative;
+  width: 350px;
+  height: 100vh;
+  z-index: 1200;
+}
+
+.sidebar-container-w {
+  width: 350px;
+}
+
+@media (max-width: 768px) {
+  .sidebar-container-dashboard {
+    position: absolute;
+    width: 100%;
+    background-color: #333333e6;
+  }
+
+  .display-none {
+    display: none;
+  }
+
+  .sidebar-container-w {
+    left: -100%;
+  }
+}
+
+.animate-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0%;
+  overflow: auto;
+  transition: all 0.8s ease-in-out;
+}
+
+.close-menu {
+  transition: all 0.8s ease-in-out;
+}

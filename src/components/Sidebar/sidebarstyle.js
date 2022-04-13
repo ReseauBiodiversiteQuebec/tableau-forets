@@ -5,6 +5,11 @@ import "../../css/external/common.css";
 export const SiderContainer = styled(Container)`
   color: ${colors.white};
   width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: ${colors.white};
 `;
 
 export const SiderTitleContainer = styled(Container)`

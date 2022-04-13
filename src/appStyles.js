@@ -42,6 +42,11 @@ export const AppContainer = styled(Container)`
   width: 100%;
   height: 100vh;
   padding: 0;
+  overflow: hidden;
+  ::-webkit-scrollbar {
+    width: 0; /* Remove scrollbar space */
+    background: transparent; /* Optional: just make scrollbar invisible */
+  }
 `;
 
 export const LeftContent = styled(Container)`
@@ -54,11 +59,22 @@ export const LeftContent = styled(Container)`
   padding: 0;
   background-color: transparent;
   width: max(20%, 290px);
-  overflow-y: scroll;
+  overflow-y: hidden;
 `;
 
 export const RightContent = styled(LeftContent)`
   display: flex;
   flex-direction: column;
-  width: 80%;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  @media (max-width: 768px) {
+    width: 100%;
+
+    & .leaflet-container {
+      width: 100vw;
+      height: 100vh;
+    }
+  }
 `;
