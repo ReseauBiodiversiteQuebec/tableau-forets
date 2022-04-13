@@ -5,10 +5,10 @@ import { colors } from "../../../styles";
 export const SidebarFormContainer = styled(SiderContainer)`
   display: flex;
   flex-direction: column;
+
   gap: 10px;
   padding: 0 30px;
   max-height: 80vh;
-  overflow-y: hidden;
 
   @media (max-height: 960px) {
     overflow-y: scroll;
@@ -18,8 +18,8 @@ export const SidebarFormContainer = styled(SiderContainer)`
 export const WrapperContainer = styled(SiderContainer)`
   display: flex;
   flex-direction: column;
-  padding: 0 1em;
-  margin: 0px;
+  padding: 0 1.8em;
+  height: fit-content;
 `;
 
 export const Spiner = styled.div`
