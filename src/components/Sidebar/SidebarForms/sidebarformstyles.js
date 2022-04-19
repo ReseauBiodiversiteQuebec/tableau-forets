@@ -5,7 +5,6 @@ import { colors } from "../../../styles";
 export const SidebarFormContainer = styled(SiderContainer)`
   display: flex;
   flex-direction: column;
-
   gap: 10px;
   padding: 0 30px;
   max-height: 80vh;

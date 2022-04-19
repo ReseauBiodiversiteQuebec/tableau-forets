@@ -6,8 +6,9 @@ import { colors } from "../../styles";
 
 function RightContentGroup(props) {
   const { width, height } = props;
+  const realWith = width > 768 ? width - 350 : width;
   return (
-    <RightContent>
+    <RightContent style={{ width: `${realWith}px` }}>
       {width !== 0 && height !== 0 && <MSMaps />}
       <Legend
         absolute={true}
